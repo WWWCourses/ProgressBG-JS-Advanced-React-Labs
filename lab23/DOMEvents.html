@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Events</title>
+</head>
+<body>
+  <button id="btn1" onclick="btnOnClickHandler(this,event)">Click me</button>
+  <button id="btn2">Click me,too</button>
+
+  <script type="text/javascript">
+    let btn2 = document.querySelector('#btn2');
+    let now = Date.now();
+
+    function btnOnClickHandler(node,e){
+      console.dir(node);
+      console.dir(e);
+
+      let clickedAt = new Date(now+e.timeStamp);
+      console.log(`${node.id} was clicked at ${clickedAt.toLocaleString()}`);
+    }
+
+    function btnClickHandler(e){
+      console.dir(this);
+      console.dir(e);
+
+      let clickedAt = new Date(now+e.timeStamp);
+      console.log(`${this.id} was clicked at ${clickedAt.toLocaleString()}`);
+    }
+
+    btn2.addEventListener('click', btnClickHandler);
+
+  </script>
+</body>
+</html>

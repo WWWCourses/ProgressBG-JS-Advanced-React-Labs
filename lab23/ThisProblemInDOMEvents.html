@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Events</title>
+</head>
+<body>
+  <button id="btn1" onclick="user.greet()">Greet user</button>
+  <button id="btn2">Greet user</button>
+
+  <script type="text/javascript">
+    let btn2 = document.querySelector('#btn2');
+
+    let user = {
+      'userName': 'Pesho',
+      'greet':function(){                
+        console.log(`Hello ${this.userName}`);
+        // Problem: this will be bound to the element, on which the Event is fired, not to the 'user' object
+        console.dir(this);
+      }
+    }  
+
+    // This problem solution:
+    user.greet = user.greet.bind(user);    
+
+    btn2.addEventListener('click', user.greet);
+
+  </script>
+</body>
+</html>

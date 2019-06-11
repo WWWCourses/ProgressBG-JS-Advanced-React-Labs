@@ -6,5 +6,6 @@
         "plaintext",
         "python",
         "html"
-    ]
+    ],
+    "editor.snippetSuggestions": "top",
 }
