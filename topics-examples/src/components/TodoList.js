@@ -1,5 +1,6 @@
 import React from 'react';
-import  Todo from "./Todo";
+import Todo from "./Todo";
+import AddTodo from "./AddTodo";
 
 class TodoList extends React.Component{
 
@@ -15,9 +16,24 @@ class TodoList extends React.Component{
       ]
     };
   }
+
+  addTodo(todo){
+    // this.state.todos.push(todo);
+    console.log(todo);
+  }
+
+  getTodo(e){
+    // this.state.todos.push(todo);
+    console.log(e.target.value);
+  }
+
   render(){
     return  (
           <div>
+            <AddTodo
+              onAddTodo={this.addTodo}
+              onGetTodo={this.getTodo}
+            />
             <ul>
               {this.state.todos.map( todo =>
                 <Todo title={todo.title} completed={todo.completed}/>
