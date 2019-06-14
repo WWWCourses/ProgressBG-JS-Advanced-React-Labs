@@ -2,26 +2,25 @@ import React from 'react';
 
 export class AutoCounter extends React.Component{
     constructor(props){
+        console.log('====================================');
+        console.log(`constructor is fired`);
+        console.log('====================================');
         super(props)
 
         this.state = {
-            'count': 0
+            'count': 0,
         }
         this.startCount = this.startCount.bind(this);
     }
 
     startCount(){
-        let count = this.state.count;
-
-        console.dir(this.state);
+        // console.dir(this.state);
 
         setInterval( ()=>{
-            console.log(`count: ${count}`);
             this.setState( (prevState,prevProps)=>{
                 return {'count': prevState.count + 1}
             } );
         }, 1000);
-
     }
 
     shouldComponentUpdate(){
@@ -29,7 +28,8 @@ export class AutoCounter extends React.Component{
         console.log(`shouldComponentUpdate fired`);
         console.log('====================================');
 
-        return false;
+        // if false is returned, the render() would not be fired!
+        return true;
     }
 
     render(){
