@@ -1,6 +1,6 @@
 import React from 'react';
 import Todo from "./Todo";
-import AddTodo from "./AddTodo";
+// import AddTodo from "./AddTodo";
 
 export class TodoListStateDemo extends React.Component{
 
@@ -21,12 +21,16 @@ export class TodoListStateDemo extends React.Component{
 
     this.newTodo =  {'title': 'Todo 5', 'completed': false}
 
+
+    // ***** bind 'this' in addTodo():
     // this.addTodo = this.addTodo.bind(this);
-    this.addTodo =
-    ()=>{
+    // ***** or with arrow function:
+    this.addTodo = ()=>{
         console.log('====================================');
         console.log(`addTodo() fired`);
         console.log('====================================');
+
+        // that would not work:
         // this.state.todos.push(this.newTodo);
 
         this.setState({
@@ -34,7 +38,8 @@ export class TodoListStateDemo extends React.Component{
             'count': 5
         })
 
-        // console.dir(this.state);
+        // will not show the new state, because of the async nature of setState
+        console.dir(this.state);
     }
   }
 
