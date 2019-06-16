@@ -1,14 +1,16 @@
 import React from 'react';
 // import Parent from "./components/ChildParent";
 // import {AutoCounter} from "./components/AutoCounter";
-import {TodoListStateDemo} from "./components/TodoListStateDemo";
+import {ListsAndKeys} from "./components/ListsAndKeys";
 
 function App(props) {
   return (
     <div className="App">
-      <TodoListStateDemo/>
+      <ListsAndKeys/>
     </div>
   );
 }
 
 export default App;
+
+

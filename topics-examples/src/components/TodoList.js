@@ -2,7 +2,7 @@ import React from 'react';
 import Todo from "./Todo";
 import AddTodo from "./AddTodo";
 
-class TodoList extends React.Component{
+export class TodoList extends React.Component{
 
   constructor(){
     super();
@@ -11,11 +11,10 @@ class TodoList extends React.Component{
       'todos' :  [
         {'title': 'Todo 1', 'completed': false},
         {'title': 'Todo 2', 'completed': true},
-        {'title': 'Todo 3', 'completed': false},
-        {'title': 'Todo 4', 'completed': false},
       ]
     };
   }
+
 
   addTodo(todo){
     // this.state.todos.push(todo);
@@ -28,6 +27,8 @@ class TodoList extends React.Component{
   }
 
   render(){
+    const {todos} = this.state;
+
     return  (
           <div>
             <AddTodo
@@ -35,17 +36,17 @@ class TodoList extends React.Component{
               onGetTodo={this.getTodo}
             />
             <ul>
-              {this.state.todos.map( todo =>
-                <Todo title={todo.title} completed={todo.completed}/>
-              )}
+              {
+                todos.map( todo =>
+                  <Todo  key={todo.id} title={todo.title} completed={todo.completed}/>
+                )
+              }
             </ul>
           </div>
         )
   }
 }
 
-
-export default TodoList
 
 
 
