@@ -2,7 +2,7 @@ import React from 'react';
 import Todo from "./Todo";
 import AddTodo from "./AddTodo";
 
-export class TodoList extends React.Component{
+export class TodoListAjax extends React.Component{
 
   constructor(){
     super();

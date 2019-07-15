@@ -1,12 +1,12 @@
 import React from 'react';
 // import Parent from "./components/ChildParent";
 // import {AutoCounter} from "./components/AutoCounter";
-import {ListsAndKeys} from "./components/ListsAndKeys";
+import {TodoListAjax} from "./components/TodoListAjax";
 
 function App(props) {
   return (
     <div className="App">
-      <ListsAndKeys/>
+      <TodoListAjax/>
     </div>
   );
 }
