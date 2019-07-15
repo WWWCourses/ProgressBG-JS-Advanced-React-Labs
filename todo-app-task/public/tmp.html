@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- TODO: delete this file -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>
+          Name:
+          <input type="text" name="name" />
+        </label>
+        <input onclick="clickHandler()" type="submit" value="Submit" />
+    </form>
+
+    <script>
+
+        function clickHandler() {
+            console.log('====================================');
+            console.log();
+            console.log('====================================');
+        }
+        let dom = {
+            inputName: document.querySelector('input[type="text"]'),
+            btnSubmit: document.querySelector('input[type="submit"]'),
+        };
+
+        dom.btnSubmit.addEventListener('click', function(e) {
+            e.preventDefault();
+            let userName =
+            console.log('====================================');
+            console.log(dom.inputName.value);
+            console.log('====================================');
+        })
+    </script>
+</body>
+</html>
