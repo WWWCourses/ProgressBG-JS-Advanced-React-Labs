@@ -3,9 +3,10 @@ import React from 'react';
 class AddTodo extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
             'inputTitle': '',
-            'inputId': 4
+            'inputId': 4 // just for demo - setting some deafult value
          };
 
 
@@ -24,7 +25,7 @@ class AddTodo extends React.Component {
     changeHandler(e){
         // set state
         this.setState({'inputTitle':e.target.value });
-        this.props.AddTodo(this.state.inputTitle);
+        this.props.addTodo(this.state.inputTitle);
     }
 
 
