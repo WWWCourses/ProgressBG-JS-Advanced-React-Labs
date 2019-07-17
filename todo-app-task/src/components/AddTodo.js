@@ -16,9 +16,6 @@ class AddTodo extends React.Component {
 
     clickHandler(e){
         // add input.value as newTodo.title to App.state.todos
-        console.log('====================================');
-        console.log();
-        console.log('====================================');
         e.preventDefault();
     }
 
@@ -35,9 +32,11 @@ class AddTodo extends React.Component {
             <form>
                 <label>Title<input type="text"
                     value={this.state.inputTitle}
-                    onChange={this.changeHandler}
+                    onCh
+                    ={this.changeHandler}
                 /></label>
-                <label> ID: <input type="number" value={this.state.inputId}/></label>
+
+
                 <button onClick={this.clickHandler}>Add</button>
             </form>
         );

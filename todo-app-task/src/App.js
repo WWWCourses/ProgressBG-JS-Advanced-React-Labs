@@ -28,7 +28,7 @@ class App extends React.Component {
           'title': 'task3',
           'completed': 0
         },
-      ]
+      ],
     };
 
     this.userName = 'Ada';
@@ -37,9 +37,17 @@ class App extends React.Component {
   }
 
   addTodo(newTodoTitle){
+    // add newTodoTitle to state:
+    const newTodoObj = {};
+    newTodoObj.title = newTodoTitle;
+    newTodoObj.id = this.state.todos[this.state.todos.length-1] +1;
+    newTodoObj.completed = 0;
+
+    console.log('@@@@@@@@@@@@@@@@@@@');
+    console.log(this.state);
     console.log('====================================');
-    console.log(`newTodoTitle: ${newTodoTitle}`);
-    console.log('====================================');
+
+    this.setState({[this.state.todos]:1} )
   }
   render() {
     return (
