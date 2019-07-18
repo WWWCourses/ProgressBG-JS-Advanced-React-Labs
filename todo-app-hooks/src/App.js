@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 import './App.css';
-import TodoList from "./components/TodoList";
+import Counter from "./components/TodoList";
 
 function App() {
   const todosList =  ['Task 1', 'Task 2'];
@@ -12,13 +12,11 @@ function App() {
   //   'todos':  ['Task 1', 'Task 2'];
   // }
 
-  const [todos, addTodo] = useState(todosList);
+  // const [todos, addTodo] = useState(todosList);
 
   return (
     <div className="App">
-      <TodoList todos={todos} x="1"/>
-      <button onClick={ () => addTodo([...todos, newTask])}>Add</button>
-      {/* onClick={() => setCount(count + 1)} */}
+      <Counter ic="0"/>
     </div>
   );
 }

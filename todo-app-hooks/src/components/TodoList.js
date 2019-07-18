@@ -1,15 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-function TodoList(props) {
+function Counter(props) {
+    const initialCount = props.ic * 1;
 
-
-    // props = {
-    //     'todos': ['Task 1', 'Task 2'],
-    //     'x': 1
-    // }
+    const [count, setCount] = useState(initialCount);
     return (
-        props.todos.map( todo => <div>{todo}</div>)
-    )
-}
+      <div>
+        Count: {count}
+        <button onClick={() => setCount(initialCount)}>Reset</button>
+        <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
+        <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button>
+      </div>
+    );
+  }
 
-export default TodoList;
+export default Counter;
