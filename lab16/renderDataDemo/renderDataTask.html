@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>renderData </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+</head>
+<body>
+	<div class="output">
+		<ul>
+			<!-- <li><span>Todo 1</span><span>No</span></li>
+			<li><span>Todo 2</span><span>Yes</span></li>
+			<li><span>Todo 3</span><span>No</span></li> -->
+		</ul>
+	</div>
+	<button class="btnShow">Show Todos</button>
+
+	<script>
+		let todos = [
+			{
+				title: 'Todo 1',
+				'completed': false
+			},
+			{
+				'title': 'Todo 2',
+				'completed': true
+			},
+			{
+				'title': 'Todo 3',
+				'completed': false
+			},
+		]
+
+		const renderTodos = function (output, todos) {
+
+		}
+
+		const btnShow = document.querySelector('.btnShow');
+		const outputUL = document.querySelector('.output>ul');
+
+		btnShow.addEventListener('click', function (e) {
+			renderTodos(outputUL, todos)
+		})
+	</script>
+</body>
+</html>

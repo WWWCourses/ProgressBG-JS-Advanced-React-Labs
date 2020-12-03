@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>renderData </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+</head>
+<body>
+	<div class="output">
+		<ul>
+			<!-- <li><span>Todo 1</span><span>No</span></li>
+			<li><span>Todo 2</span><span>Yes</span></li>
+			<li><span>Todo 3</span><span>No</span></li> -->
+		</ul>
+	</div>
+	<button class="btnShow">Show Todos</button>
+
+	<script>
+		let todosString = `
+		[
+			{
+				"title": "Todo 1",
+				"completed": false
+			},
+			{
+				"title": "Todo 2",
+				"completed": true
+			},
+			{
+				"title": "Todo 3",
+				"completed": false
+			}
+		]
+		`;
+		let todos = JSON.parse(todosString);
+
+
+
+
+		const render = function(output, todos ) {
+			todos.forEach( todo=>{
+				// console.log( todo.title + ':' + (todo.completed?'Yes':'No'));
+				// console.log( `${todo.title}:${todo.completed?'Yes':'No'}`);
+				output.innerHTML += `<li><span>${todo.title}</span><span>${todo.completed?'Yes':'No'}</span></li>`;
+			} )
+
+			// 'Todo 1': No
+			// 'Todo 2': Yes
+			// 'Todo 3': No
+		}
+
+		// DOM cache:
+		const btnShow = document.querySelector('.btnShow');
+		const output = document.querySelector('.output>ul');
+
+		btnShow.addEventListener('click', function () {
+			render(output, todos)
+		})
+
+	</script>
+</body>
+</html>

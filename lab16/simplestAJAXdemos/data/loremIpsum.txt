@@ -1,0 +1,10 @@
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iure unde fuga adipisci cupiditate ducimus inventore pariatur ullam, accusantium nihil maiores quae? Ratione beatae, consectetur quos tempora nam nobis aut?
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iure unde fuga adipisci cupiditate ducimus inventore pariatur ullam, accusantium nihil maiores quae? Ratione beatae, consectetur quos tempora nam nobis aut?
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iure unde fuga adipisci cupiditate ducimus inventore pariatur ullam, accusantium nihil maiores quae? Ratione beatae, consectetur quos tempora nam nobis aut?
+
+
+http://127.0.0.1:5500/lab16/AJAXDemo.html
+http://127.0.0.1:5500/lab16/data/loremIpsum.txt
+
