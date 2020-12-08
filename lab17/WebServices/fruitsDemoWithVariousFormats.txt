@@ -1,0 +1,30 @@
+TABLE FRUITS:
+id | fruit
+ 1 | apple
+ 2 | orange
+ 3 | bannana
+
+// simplest notation, representing FRUITS data:
+"apple,orange,bannana,ufdiis"
+
+// JSON notation, representing FRUITS data:
+{
+  'fruits': ['apple', 'orange', 'banana'],
+}
+
+// XML notation, representing FRUITS data:
+<fruits>
+  <fruit>apple</fruit>
+  <fruit>orange</fruit>
+  <fruit>banane</fruit>
+</fruits>
+
+//YAML notation, representing FRUITS data:
+fruits:
+	-apple
+	-orange
+	-banana
+
+
+
+

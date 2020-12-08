@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>addEventListenerOnChildren </title>
+</head>
+<body>
+	<ul class="container">
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+		<li>Item 4</li>
+		<li>Item 5</li>
+		<li>Item 6</li>
+	</ul>
+	<div class="output"></div>
+
+
+
+	<script>
+		const output = document.querySelector('.output');
+		const container = document.querySelector('.container');
+		const children = container.children;
+
+		// Variant 1: using e.target on parent container click:
+		// container.addEventListener('click', (e)=>{
+		// 	output.innerHTML = 	e.target.innerHTML;
+		// })
+
+		// Variant2: using loop on children:
+		// for (let i = 0; i < children.length; i++) {
+		// 	children[i].addEventListener('click', function(){
+		// 		output.innerHTML = this.innerHTML;
+		// 	})
+		// }
+
+		// Note the "this" problem in arrow function
+		for (let i = 0; i < children.length; i++) {
+			children[i].addEventListener('click', ()=>{
+				output.innerHTML = this.innerHTML;
+			})
+		}
+	</script>
+</body>
+</html>
