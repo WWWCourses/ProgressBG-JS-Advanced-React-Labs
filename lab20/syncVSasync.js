@@ -4,6 +4,8 @@ let testArrays = [
 	Array.from({length:2_000_000},(_,i)=>i+1),
 	Array.from({length:3_000_000},(_,i)=>i+1),
 ];
+
+
 function syncDemo(){
 	console.time('syncDemo');
 	testArrays.forEach(arr=>{
