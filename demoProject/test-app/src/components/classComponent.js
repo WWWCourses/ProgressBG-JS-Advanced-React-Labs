@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-class ClassComp extends React.Component {
-    render() {
-      return <div>this is a class component</div>;
-    }
+class H1ClassComp extends React.Component{
+	render(){
+		return React.createElement('h1', null,  "H1 class component");
+	}
 }
 
-export default ClassComp
+export default H1ClassComp
