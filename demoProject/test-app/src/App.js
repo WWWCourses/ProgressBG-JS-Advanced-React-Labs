@@ -1,11 +1,12 @@
 import './App.css';
 
-import HWComp from "./components/hwComp";
+import EventsDemo from "./components/eventsDemo";
 
 function App() {
   return (
     <div className="App">
-      <HWComp/>
+
+      <EventsDemo id="test"/>
     </div>
   );
 }
