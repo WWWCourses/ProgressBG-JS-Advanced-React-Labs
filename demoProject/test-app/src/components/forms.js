@@ -12,34 +12,53 @@ class Forms extends React.Component{
 		}
 	}
 
+	handleClick = (name)=> {
+		console.log(name);
+		console.dir(this);
+
+		this.setState({
+			"outputText":this.state[name].toString()
+		})
+
+		// this.setState( (state, props)=>{
+		// 	return {
+		// 		"outputText": state[e]
+		// 	}
+		// })
+	}
+
 	handleChange = (e)=>{
 		// console.dir(e.target);
 
 		// HW: refactor the code bellow,using the ES6 computed_property_names:
 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names
-		switch(e.target.name) {
-			case "userName":
-				this.setState({
-					"userName": e.target.value
-				})
-				break;
-			case "userAge":
-				this.setState({
-					"userAge": e.target.value
-				})
-				break;
-			case "userAgreed":
-				this.setState({
-					"userAgreed": e.target.checked
-				})
-				break;
-			default:
-				// code block
-		}
-	}
+		const value = e.target.name === "userAgreed"? e.target.checked: e.target.value;
+		const name = e.target.name;
 
-	// HW: implement handleClick method, which will be fired on each button click event.
-	// Note, that each button will set a different state porperty, which will update the output div
+		this.setState({
+			[name]:value
+		})
+
+		// switch(e.target.name) {
+		// 	case "userName":
+		// 		this.setState({
+		// 			"userName": e.target.value
+		// 		})
+		// 		break;
+		// 	case "userAge":
+		// 		this.setState({
+		// 			"userAge": e.target.value
+		// 		})
+		// 		break;
+		// 	case "userAgreed":
+		// 		this.setState({
+		// 			"userAgreed": e.target.checked
+		// 		})
+		// 		break;
+		// 	default:
+		// 		// code block
+		// }
+	}
 
 	render(){
 		return <div>
@@ -54,9 +73,9 @@ class Forms extends React.Component{
 				value={this.state.userAgreed}/></label></div>
 			<hr/>
 			<div>
-				<button>get userName</button>
-				<button>get userAge</button>
-				<button>get userAgreed</button>
+				<button onClick={(e)=>this.handleClick("userName",e)}>get userName</button>
+				<button onClick={(e)=>this.handleClick("userAge",e)}>get userAge</button>
+				<button onClick={(e)=>this.handleClick("userAgreed",e)}>get userAgreed</button>
 			</div>
 			<hr/>
 			<div>{this.state.outputText}</div>
