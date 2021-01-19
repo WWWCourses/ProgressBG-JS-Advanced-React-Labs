@@ -1,11 +1,11 @@
 import './App.css';
 
-import EventsDemo from "./components/eventsDemo";
+import Forms from "./components/forms";
 
 function App() {
   return (
     <div className="App">
-      <EventsDemo id="test"/>
+      <Forms id="test"/>
     </div>
   );
 }
