@@ -22,10 +22,10 @@ class LifeCycles extends React.Component{
 		console.log(`componentDidMount called`);
 	}
 
-	shouldComponentUpdate(){
-		console.log(`componentDidMount called`);
-		return true;
-	}
+	// shouldComponentUpdate(){
+	// 	console.log(`componentDidMount called`);
+	// 	return true;
+	// }
 
 	componentDidUpdate(prevProps, prevState){
 		console.log(`componentDidUpdate`);

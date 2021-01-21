@@ -5,7 +5,7 @@ class Forms extends React.Component{
 		super(props)
 
 		this.state = {
-			"userName": "",
+			"userName": "Ada",
 			"userAge": "",
 			"userAgreed": false,
 			"outputText": "the output will be changed on btn click",
@@ -14,17 +14,10 @@ class Forms extends React.Component{
 
 	handleClick = (name)=> {
 		console.log(name);
-		console.dir(this);
 
 		this.setState({
 			"outputText":this.state[name].toString()
 		})
-
-		// this.setState( (state, props)=>{
-		// 	return {
-		// 		"outputText": state[e]
-		// 	}
-		// })
 	}
 
 	handleChange = (e)=>{
