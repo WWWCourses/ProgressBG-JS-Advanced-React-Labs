@@ -1,0 +1,6 @@
+[submodule "demoProject/todoApp"]
+	path = demoProject/todoApp
+	url = https://github.com/WWWCourses/todoApp_vanillaJS
+[submodule "demoProject/todo-app-react"]
+	path = demoProject/todo-app-react
+	url = https://github.com/WWWCourses/todo-app-react

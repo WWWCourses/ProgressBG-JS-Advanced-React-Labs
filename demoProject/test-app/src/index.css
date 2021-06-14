@@ -1,0 +1,16 @@
+.App{
+  border: 5px solid red;
+}
+.PropsDemo{
+  border: 4px solid blue;
+}
+.PropsInFunction{
+  border: 5px solid green;
+}
+
+.PropsInClass{
+  border: 5px solid lightgreen;
+}
+.StateDemo{
+  border: 5px solid orange;
+}
