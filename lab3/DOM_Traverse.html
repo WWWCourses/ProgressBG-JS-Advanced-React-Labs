@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DOM_Traverse </title>
+</head>
+<body>
+	red
+	<main>
+		red
+		<ul>
+			<li>Item 1</li>
+			<li>red</li>
+			<li>
+				<ol>
+					<li>red</li>
+				</ol>
+			</li>
+		</ul>
+		<footer>
+			<div class="test">
+				red
+				<div>red</div>
+			</div>
+		</footer>
+	</main>
+
+	<script>
+		function action(node){
+			node.style.backgroundColor = "#F00";
+		}
+
+		function traverseDOM(node){
+			if(node.innerHTML === "red"){
+				action(node)
+			}
+
+			const childs = node.children;
+			for (let i = 0; i < childs.length; i++) {
+				traverseDOM(childs[i])
+			}
+		}
+
+		traverseDOM(document.body);
+
+
+		if(node.innerHTML === "red"){
+			action(node)
+		}else {
+			// check children of body
+		}
+
+
+	</script>
+</body>
+</html>
