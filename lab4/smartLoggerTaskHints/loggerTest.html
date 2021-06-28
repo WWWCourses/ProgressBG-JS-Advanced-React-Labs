@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>test </title>
+
+	<!-- include smartLogger library -->
+	<script src="./lib/smartLogger.js"></script>
+</head>
+<body>
+
+	<script>
+		const devEnv = 1;
+
+		/* ------------------------- instantiate smartLogger() ------------------------- */
+		/* if you've choose to implement it with "Constructor", then uncomment next line */
+		//const logger = new smartLogger();
+
+		/* if you've choose to implement it with "Factory", then uncoment next line      */
+		// const logger = smartLogger();
+		/* ----------------------------------------------------------------------------- */
+
+
+		// should print '[dev log]:....' if devEnv === 1
+		// should print nothing if devEnv === 0
+		logger.log('msg');
+	</script>
+</body>
+</html>
