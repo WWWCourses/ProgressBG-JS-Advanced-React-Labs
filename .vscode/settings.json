@@ -29,5 +29,7 @@
     // "peacock.color": "#215732",
     "extensions.ignoreRecommendations": true,
     "files.autoSave": "off",
-    "typescript.tsc.autoDetect": "off"
+    "typescript.tsc.autoDetect": "off",
+    "editor.hover.sticky": false,
+    "editor.scrollbar.verticalScrollbarSize": 10
 }
