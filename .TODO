@@ -1,0 +1,7 @@
+update slides slides
+// the "magic" of "new" keyword:
+	// 1. this = {}
+	// 2. this.__proto = Student.prototype
+	// 3. return this
+	- copy by value vs copy by reference
+	- for ...in, for ...of

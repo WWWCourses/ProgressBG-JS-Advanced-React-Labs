@@ -39,7 +39,13 @@ let arr2  = [4,5];
 // foo(1,2,3,4,5)
 
 
-/* ---------------------- exhange values of 2 variable ---------------------- */
+/* --------------------------- array destructuring -------------------------- */
+// simple example
+const data = ['Ada', 23]
+let [userName, userAge]  = data
+console.log(userName, userAge);
+
+// exhange values of 2 variable
 let x = 1;
 let y = 4;
 
