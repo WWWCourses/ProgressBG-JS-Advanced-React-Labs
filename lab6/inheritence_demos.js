@@ -75,6 +75,8 @@ Cat.prototype.eat = function() {
 }
 
 function Lion(name, food, age) {
+    // this.name = name;
+    // this.food = food;
     this.age = age;
 }
 Lion.prototype = Cat.prototype
