@@ -135,13 +135,13 @@
 
 
 /* ------------------------ thisArg in map and filter ----------------------- */
-// TODO: use case for thisArg
-const data = [
-    {
-        id:1,
-        foo: ()=>this.id**2
-    }
-]
+// // TODO: use case for thisArg
+// const data = [
+//     {
+//         id:1,
+//         foo: ()=>this.id**2
+//     }
+// ]
 
 
 
