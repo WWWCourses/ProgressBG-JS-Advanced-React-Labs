@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+</head>
+<body>
+    <button>OK</button>
+
+    <script>
+        window.addEventListener('error', function name(message, source, lineno, colno, error) {
+            console.log(`message: ${message}`);
+            console.log(`source: ${source}`);
+            console.log(`lineno: ${lineno}`);
+            console.log(`colno: ${colno}`);
+            console.log(`error: ${error}`);
+        })
+        const btn = document.querySelector('button');
+        btn.addEventListener('click', function name(e) {
+            console.log(x);
+        })
+        // try {
+        //     throw new Error('Problems')
+
+        // } catch (e) {
+        //     console.dir(e)
+        //     console.error(`Error: ${e}`);
+        // }
+    </script>
+</body>
+</html>
